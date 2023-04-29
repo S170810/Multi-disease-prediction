@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<title>Home</title>
+<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+		<!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carousel.css') }}">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+<!-- CSS -->
+
+
+</head>
+    <style>
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 108px;
+      padding: 16px;
+      bottom: 8px;
+    }
+    .mainHeader
+    {
+      font-weight: bold;
+    }
+    </style>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand mr-4 mainHeader" href="/">Multi Disease Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/about">About</a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <main role="main">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1"  class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+  
+        <div class="carousel-item active">
+          <img style="width: 100%;" src="{{ url_for('static', filename='img3.jpg') }}" class="second-slide" alt="Second slide"/>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Making the Big World for Healthcare Smaller</h1>
+              <p>Still in 2023 many people are not able to get proper healthcare services because of not a wide reach of the doctors and hospitals. Using AI people can have a personal doctor at home.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-dark text-white">
+              <h5 class="mb-0">Check your disease</h5>
+            </div>
+            <div class="card-body">
+              <a href="/check" class="btn btn-primary">Check Your Disease</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-dark text-white">
+              <h5 class="mb-0">check your health status</h5>
+            </div>
+            <div class="card-body">
+                <ul style="list-style-type: none; margin:0 ; padding: 0;">
+                  <li style="display: inline-block; "><a href="/cancer" class="btn btn-primary" style="color: black;">Cancer</a></li>
+                  <li style="display: inline-block; "><a href="/diabetes" class="btn btn-primary" style="color: black;">Diabetes</a></li>
+                  <li style="display: inline-block; "><a href="/heart" class="btn btn-primary" style="color: black;">Heart</a></li>
+                  <li style="display: inline-block; "><a href="/liver" class="btn btn-primary" style="color: black;">Liver</a></li>
+                  <li style="display: inline-block; "><a href="/kidney" class="btn btn-primary" style="color: black;">Kidney</a></li>
+                  <li style="display: inline-block; "><a href="/Malaria" class="btn btn-primary" style="color: black;">Malaria</a></li>
+                  <li style="display: inline-block; margin-top: 10px; "><a href="/Pneumonia" class="btn btn-primary" style="color: black;">Pneumonia</a></li>
+                </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
